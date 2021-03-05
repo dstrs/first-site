@@ -216,14 +216,13 @@ pageTitle: Supky
       <p>There are many variations of passages of Lorem Ipsum that available, but the majority have fered alteration in some form, by injected humour.</p>
     </div>
     <div class="order-wrap">
-      <div class="order-img">
-        <div class="active-product">
+      <div class="order-img" data-gallery="order-gallery">
+        <div class="active-product" data-gallery="full">
           <img src="img/order/order1.jpg" alt="">
-
         </div>
-        <div class="product-nav-active">
+        <div class="product-nav-active" data-gallery="preview">
           <img src="img/order/order1.jpg" alt="">
-          <img src="img/order/order2.jpg" alt="">
+          <img src="img/order/order2.jpg" class="kek" alt="">
           <img src="img/order/order3.jpg " alt="">
           <img src="img/order/order4.jpg" alt="">
         </div>
@@ -351,3 +350,12 @@ pageTitle: Supky
     </div>
   </div>
 </section>
+
+<script>
+  document.addEventListener("DOMContentLoaded", ()=> {
+    let orderGallery = new VanillaGallery({
+      elem: "order-gallery",
+    });
+    console.log("orderGallery", orderGallery)
+  });
+</script>
